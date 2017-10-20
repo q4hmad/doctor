@@ -3,8 +3,9 @@ $(document).ready(function() {
     event.preventDefault();
   let issue  = $("#issue").val();
   let docName  = $("#name").val();
-  let output = $("#output").append(issue, docname);
-  console.log(issue);
+  let resultIssue = $("#resultIssue").append(issue);
+  let resultName = $("#resultName").append(docName);
+
 
 
 
