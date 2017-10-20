@@ -2,8 +2,32 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href = "css/styles.css">
     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Doctors:</title>
   </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h2>PDX Doctor Search</h2>
+      </div>
+      <div class="row">
+        <form id="userInput">
+          <form class="form-group"
+           <label for="issue">Enter Medical Condition:</label>
+           <input id="issue" name="issue" type="text"></input>
+         </form>
+         <form class="form-group">
+           <label for="name">Enter Name of the Doctor:</label>
+           <input id="name" name="name" type="text"></input>
+         </form>
+           <button type="submit" class="btn btn-warning" ></button>
+       </form>
+        <div id="output">
+        </div>
+      </div>
+     </div>
+  </body>
+  </html>
