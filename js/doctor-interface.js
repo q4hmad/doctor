@@ -5,11 +5,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     let issue  = $("#issue").val();
-
-
+    let docName  = $("#name").val();
     let promise =  new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${issue}&name=${name}&location=%20or-portland&user_location=37.773%2C-122.413&skip=0&limit=5&user_key=1288d09ed7e0e1d2b0242cfdd73d98c7`;
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${docName}&skip=0&limit=10&user_key=1288d09ed7e0e1d2b0242cfdd73d98c7`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
@@ -23,20 +22,15 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       let body = JSON.parse(response);
-      let data = (body.data);
-      data.forEach(function(info) {
-        $('#resultIssue').text(`The doctors who treat ${issue} are ${info.practices}`);
-        console.log(info.practices);
-
-        $('#resultName').text(`Doctors with the name ${name} ${info.specialty_uid}`);
-
-
-
-
-
+      let data = body.data;
+      console.log(data);
+      data.forEach(function(doctor) {
+        let profile = doctor['profile'];
+        let name = profile.first_name + ' ' + profile.last_name;
+        console.log(profile);
+      });
     }, function(error) {
-      $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+      $('.showErrors').text('No results');
     });
   });
- });
 });
