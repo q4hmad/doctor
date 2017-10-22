@@ -28,6 +28,7 @@ $(document).ready(function() {
         let profile = doctor['profile'];
         let name = profile.first_name + ' ' + profile.last_name;
         console.log(profile);
+        $("#resultsIssue").issue(profile.first_name)
       });
     }, function(error) {
       $('.showErrors').text('No results');
