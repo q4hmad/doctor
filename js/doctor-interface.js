@@ -40,7 +40,7 @@ $(document).ready(function() {
       } else {
         $("#resultIssue").text(`There are no results for this ${issue}. Please try again using different search terms.`);
 
-    }, (function(error) {
+      }, (function(error) {
       $('#showErrors').text(`There was an error processing your request: ${error.message}`);
     });
    });
