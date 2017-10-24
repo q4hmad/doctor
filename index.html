@@ -16,12 +16,9 @@
       <div class="row">
         <form id="userInput">
           <form class="form-group"
-           <label for="issue">Enter Medical Condition:</label>
+           <label for="issue">Enter Medical Condition or Name of Doctor:</label>
            <input id="issue" name="issue" type="text"></input>
-
-           <label for="name">Enter Name of the Doctor:</label>
-           <input id="name" name="name" type="text"></input>
-           <button type="submit" class="btn btn-warning" ></button>
+           <button type="submit" class="btn btn-warning" >Go</button>
          </form>
        </form>
         <div>
@@ -34,8 +31,19 @@
             </ol>
           </div>
           <div class="col-sm-4">
-             id="showErrors">
-
+            <ol id="resultAddress">
+            </ol>
+          </div>
+          <div class="col-sm-4">
+            <ol id="resultNewPatient">
+            </ol>
+          </div>
+          <div class="col-sm-4">
+            <ol id="resultPhoneNumber">
+            </ol>
+          </div>
+          <div class="col-sm-4">
+             <ol id="showErrors"></ol>
           </div>
         </div>
         </div>
