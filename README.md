@@ -1,12 +1,12 @@
 Doctor Search PDX
 
-An application that allows a user to look up doctors to treat specific medical issues, 10.20.2017
+An application that uses the BetterDoctor API to allow a user to look up doctors to treat specific medical issues, 10.28.2017
 
 By Qudsia Ahmad
 
 Description
 
-This application makes an API call on the BetterDoctor API to retrieve information about doctors in the Portland area. Users can search doctors by name or medical issue.
+This application provides users with information about doctors in the Portland area. Users can search doctors by name or medical condition.
 
 Setup/Installation Requirements
 
